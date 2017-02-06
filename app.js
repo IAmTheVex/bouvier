@@ -3,7 +3,7 @@ var app = express();
 
 var bouvierOptions = {
   modules: [
-    ['render', require('bouvier-engine'), {}],
+    ['render', require('bouvier-engine'), {mainLayout: 'main'}],
 //    ['database-controller', require('bouvier-engine'), {}]
 //    ['local-login', require('bouvier-login-local'), {}]
   ]
@@ -12,8 +12,7 @@ var bouvierOptions = {
 const bouvier = require('bouvier')(app, bouvierOptions);
 
 bouvier.module('render').helper('help', (text) => {
-  console.log(text);
-  return "ok";
+  return "this is the text: " + text;
 });
 
 //bouvier.module('render').test('main', 'home');
