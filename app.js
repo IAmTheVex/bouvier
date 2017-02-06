@@ -16,10 +16,10 @@ bouvier.module('render').helper('help', (text) => {
   return "ok";
 });
 
-bouvier.module('render').lay('main');
+//bouvier.module('render').test('main', 'home');
 
 app.get('/', (req, res) => {
   res.render('home', {shit: "shittttt", shit2: "shit2"});
 });
 
-app.listen(80);
+app.listen(3000);

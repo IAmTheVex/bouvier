@@ -1,2 +1,3 @@
-#import xx
-#import lll
+#import header
+#{body}
+#import footer
